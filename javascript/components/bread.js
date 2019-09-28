@@ -11,10 +11,10 @@ const getSelectedBreads = () => {
     //get all bread checkboxes
     const selectedBreads = []
     //keep the selected breads
-    const breadCheckbox = document.getElementsByClassName('bread');
-    for(let j = 0; j < breadCheckbox.length; j++){
+    const breadRadio = document.getElementsByClassName('bread');
+    for(let j = 0; j < breadRadio.length; j++){
         for(let k = 0; k < breads.length; k++){
-            if(breadCheckbox[j].checked && breadCheckbox[j].id === breads[k].id){
+            if(breadRadio[j].checked && breadRadio[j].id === breads[k].id){
                 selectedBreads.push(breads[k]);
             }
         }
@@ -28,13 +28,19 @@ const printBreadOpt = () => {
     for (let i = 0; i < breads.length; i++){
     domString +=`
     <div class="form-check">
-        <input type="radio" class="bread form-check-input form-radio-input" value="${breads[i].id}" id="${breads[i].id}">
+        <input class="form-check-input bread" type="radio" name="breads" id="${breads[i].id}" value="${breads[i].id}">
         <label class="form-check-label" for="${breads[i].id}">${breads[i].name}</label>
     </div>
   `;
     }
     utilities.printToDom('breads', domString);
     //place "checked" on the first <input> tag
+    const checkedFirstRadio = () => {
+        let firstRadio = document.getElementsByClassName("bread")[0];
+        let checked = document.createAttribute("checked");
+        firstRadio.setAttributeNode(checked);
+      }
+    checkedFirstRadio();
 };
 
 export default { printBreadOpt, getSelectedBreads };
