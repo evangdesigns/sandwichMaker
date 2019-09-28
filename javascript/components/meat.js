@@ -5,7 +5,7 @@ const meats =[
     {id:"meat2",name:"turkey", price: 50},
     {id:"meat3",name:"tuna", price: 50},
     {id:"meat4",name:"roast beef", price: 50},
-    {id:"noMeat", name:"none", prive: 0}
+    {id:"noMeat",name:"none", price: 0}
 ];
 
 const getSelectedMeats = () => {
