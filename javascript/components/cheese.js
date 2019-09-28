@@ -12,7 +12,7 @@ const getSelectedCheeses = () => {
     //get all cheese checkboxes
     const selectedCheeses = []
     //keep the selected cheeses
-    const cheeseCheckbox = document.getElementsByClassName('cheese');
+    const cheeseCheckbox = document.getElementsById('cheese');
     for(let j = 0; j < cheeseCheckbox.length; j++){
         for(let k = 0; k < cheeses.length; k++){
             if(cheeseCheckbox[j].checked && cheeseCheckbox[j].id === cheeses[k].id){
