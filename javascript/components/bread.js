@@ -27,13 +27,14 @@ const printBreadOpt = () => {
     let domString = '';
     for (let i = 0; i < breads.length; i++){
     domString +=`
-    <div class="form-group form-check">
-        <input type="radio" class="bread form-check-input" id="${breads[i].id}">
-        <label class="form-check-label" for="${breads[i].id}">${breads[i].name} ($${(breads[i].price/100)})</label>
+    <div class="form-check">
+        <input type="radio" class="bread form-check-input form-radio-input" value="${breads[i].id}" id="${breads[i].id}">
+        <label class="form-check-label" for="${breads[i].id}">${breads[i].name}</label>
     </div>
   `;
     }
     utilities.printToDom('breads', domString);
+    //place "checked" on the first <input> tag
 };
 
 export default { printBreadOpt, getSelectedBreads };

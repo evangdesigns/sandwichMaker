@@ -1,3 +1,8 @@
 body {
     background-color: goldenrod;
 }
+
+.column{
+    border-left: 1px #000 solid;
+    padding: 0 20px;
+}
