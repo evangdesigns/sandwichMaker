@@ -4,7 +4,7 @@
 Use this application to select sandwhich elements and get a final cost for your sandwich creation.
 
 ## Screenshots
-
+![Sandwich Maker Preview](https://github.com/evangdesigns/sandwichMaker/blob/master/screenshots/mainView.png?raw=true)
 
 ## How-2-Run
 * Clone down this repo
