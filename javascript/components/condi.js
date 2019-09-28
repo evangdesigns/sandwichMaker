@@ -12,7 +12,7 @@ const getSelectedCondis = () => {
     //get all condi checkboxes
     const selectedCondis = []
     //keep the selected condis
-    const condiCheckbox = document.getElementsById('condis');
+    const condiCheckbox = document.getElementsByClassName("condi");
     for(let j = 0; j < condiCheckbox.length; j++){
         for(let k = 0; k < condis.length; k++){
             if(condiCheckbox[j].checked && condiCheckbox[j].id === condis[k].id){

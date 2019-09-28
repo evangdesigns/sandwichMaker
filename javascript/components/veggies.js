@@ -12,7 +12,7 @@ const getSelectedVeggies = () => {
     //get all veggie checkboxes
     const selectedVeggies = []
     //keep the selected veggies
-    const veggieCheckbox = document.getElementsById('veggie');
+    const veggieCheckbox = document.getElementsByClassName('veggie');
     for(let j = 0; j < veggieCheckbox.length; j++){
         for(let k = 0; k < veggies.length; k++){
             if(veggieCheckbox[j].checked && veggieCheckbox[j].id === veggies[k].id){

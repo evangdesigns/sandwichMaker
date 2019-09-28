@@ -2,7 +2,10 @@ body {
     background-color: goldenrod;
 }
 
+.column:first-child {
+    border-left: 1px #000 solid; 
+}
 .column{
-    border-left: 1px #000 solid;
+    border-right: 1px #000 solid;
     padding: 0 20px;
 }
