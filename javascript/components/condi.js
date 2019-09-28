@@ -1,0 +1,40 @@
+import utilities from '../helpers/utilities.js';
+
+const condis =[
+    {id:"condi1",name:"ketchup",price: 50},
+    {id:"condi2",name:"mayo",price: 50},
+    {id:"condi3",name:"mustard", price: 50},
+    {id:"condi4",name:"secret sauce",price: 50},
+    {id:"noCondi",name:"none",price: 0}
+];
+
+const getSelectedCondis = () => {
+    //get all condi checkboxes
+    const selectedCondis = []
+    //keep the selected condis
+    const condiCheckbox = document.getElementsById('condis');
+    for(let j = 0; j < condiCheckbox.length; j++){
+        for(let k = 0; k < condis.length; k++){
+            if(condiCheckbox[j].checked && condiCheckbox[j].id === condis[k].id){
+                selectedCondis.push(condis[k]);
+            }
+        }
+    }
+
+    return selectedCondis;
+};
+
+const printCondiOpt = () => {
+    let domString = '';
+    for (let i = 0; i < condis.length; i++){
+    domString +=`
+    <div class="form-check">
+        <input type="checkbox" class="condi form-check-input form-checkbox-input" value="${condis[i].id}" id="${condis[i].id}">
+        <label class="form-check-label" for="${condis[i].id}">${condis[i].name}</label>
+    </div>
+  `;
+    }
+    utilities.printToDom('condis', domString);
+};
+
+export default { printCondiOpt, getSelectedCondis };
