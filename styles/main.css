@@ -1,11 +1,24 @@
 body {
     background-color: goldenrod;
 }
-
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.bottom-rail {
+    margin:20px 0;
+    border-bottom: 1px #000 solid;
+}
 .column:first-child {
     border-left: 1px #000 solid; 
 }
 .column{
     border-right: 1px #000 solid;
     padding: 0 20px;
+}
+#orderButton{
+    margin:10px 0;
+}
+.hide {
+    display: none;
 }

@@ -1,11 +1,10 @@
 import utilities from '../helpers/utilities.js';
 
 const meats =[
-    {id:"meat1",name:"ham", price: 50},
-    {id:"meat2",name:"turkey", price: 50},
-    {id:"meat3",name:"tuna", price: 50},
-    {id:"meat4",name:"roast beef", price: 50},
-    {id:"noMeat",name:"none", price: 0}
+    {id:"meat1",name:"Ham", price: 50},
+    {id:"meat2",name:"Turkey", price: 50},
+    {id:"meat3",name:"Tuna", price: 50},
+    {id:"meat4",name:"Roast Beef", price: 50},
 ];
 
 const getSelectedMeats = () => {
@@ -33,7 +32,13 @@ const printMeatOpt = () => {
         <label class="form-check-label" for="${meats[i].id}">${meats[i].name}</label>
     </div>
   `;
-    }
+    };
+    domString += `
+    <div class="form-check">
+        <input type="checkbox" class="cheese form-check-input form-checkbox-input" value="none">
+        <label class="form-check-label" for="none">None</label>
+    </div>
+    `;
     utilities.printToDom('meats', domString);
 };
 

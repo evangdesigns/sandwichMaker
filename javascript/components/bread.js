@@ -1,10 +1,10 @@
 import utilities from '../helpers/utilities.js';
 
 const breads =[
-    {id:"bread1",name:"white", price: 300},
-    {id:"bread2",name:"wheat", price: 300},
-    {id:"bread3",name:"honey oat", price: 300},
-    {id:"bread4",name:"penicillin", price: 300},
+    {id:"bread1",name:"White", price: 300},
+    {id:"bread2",name:"Wheat", price: 300},
+    {id:"bread3",name:"Honey Oat", price: 300},
+    {id:"bread4",name:"Penicillin", price: 300},
 ];
 
 const getSelectedBreads = () => {
@@ -35,12 +35,7 @@ const printBreadOpt = () => {
     }
     utilities.printToDom('breads', domString);
     //place "checked" on the first <input> tag
-    const checkedFirstRadio = () => {
-        let firstRadio = document.getElementsByClassName("bread")[0];
-        let checked = document.createAttribute("checked");
-        firstRadio.setAttributeNode(checked);
-      }
-    checkedFirstRadio();
+  
 };
 
 export default { printBreadOpt, getSelectedBreads };

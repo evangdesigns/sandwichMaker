@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <div class="container">
+  <div class="container">
   <h1 class="text-center">PICK-A-SANDWICH</h1>
-  <hr>
-  <div class="container row">
+  <div class="bottom-rail"></div>
+  <div class="container d-flex row justify-content-around">
     <div class="col-2 column">
       <h5>PICK-A-BREAD</h5>
       <div class="form-radio" id="breads"></div>
@@ -38,35 +38,25 @@
         <div class="form-group" id="condis"></div>
     </div>
   </div>
-  <hr>
+  <div id="orderButton" class="d-flex row justify-content-center"></div>
+  <div class="bottom-rail"></div>
   <div class="container">
-    <div id="finalOrder"></div>
-    <div class="container row d-flex">
-      <div id="orderSummary" class="column">
-        <h4 class="text-center">ORDER SUMMARY</h4>
-        <div class="d-flex row">
-        <div>
-          <h6>BREAD</h6>
+    <div  class="hide" id="finalOrder">
+      <div class="container row d-flex justify-content">
+        <div id="orderSummary" class="column flex-grow-1">
+          <h4 class="text-center">ORDER SUMMARY</h4>
+          <div class="d-flex row justify-content-around" id="summary">
+        
+          </div>
         </div>
-        <div>
-          <h6>MEAT</h6>
+        <div id="orderTotal" class="column justify-content-center">
+          
         </div>
-        <div>
-          <h6>CHEESE</h6>
-        </div>
-        <div>
-          <h6>VEGGIES</h6>
-        </div>
-        <div>
-          <h6>CONDIMENTS</h6>
-        </div>  
       </div>
     </div>
-      <div id="orderTotal"></div>
     </div>
-  </div> 
-  <p class="text-center">©2019 Pick-A-Sandwich</p>
-</div>
-  <script type="module" src="./javascript/main.js"></script>
+    <p class="text-center">©2019 Pick-A-Sandwich</p>
+  </div>
+<script type="module" src="./javascript/main.js"></script>
 </body>
 </html>

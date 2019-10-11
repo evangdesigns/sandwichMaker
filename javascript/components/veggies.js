@@ -1,11 +1,10 @@
 import utilities from '../helpers/utilities.js';
 
 const veggies =[
-    {id:"veggie1",name:"lettuce", price: 50},
-    {id:"veggie2",name:"tomato", price: 50},
-    {id:"veggie3",name:"olives", price: 50},
-    {id:"veggie4",name:"onion", price: 50},
-    {id:"noVeggie",name:"none", price: 0}
+    {id:"veggie1",name:"Lettuce", price: 50},
+    {id:"veggie2",name:"Tomato", price: 50},
+    {id:"veggie3",name:"Olives", price: 50},
+    {id:"veggie4",name:"Onion", price: 50},
 ];
 
 const getSelectedVeggies = () => {
@@ -33,8 +32,22 @@ const printVeggieOpt = () => {
         <label class="form-check-label" for="${veggies[i].id}">${veggies[i].name}</label>
     </div>
   `;
-    }
+    };
+    domString += `
+    <div class="form-check">
+        <input type="checkbox" class="cheese form-check-input form-checkbox-input" value="none">
+        <label class="form-check-label" for="none">None</label>
+    </div>
+    `;
     utilities.printToDom('veggies', domString);
 };
 
+const none = () => {
+    let vItems = getElementsByValue.includes === 'veggie'
+    for(var l = 0; i < vItems.length; i++){
+        if(vItems[l].type='checkbox')
+            vItems[l].checked=false;
+    }
+document.getElementsByValue("vNone").addEventListener("click", none(vItems));    
+}
 export default { printVeggieOpt, getSelectedVeggies };
